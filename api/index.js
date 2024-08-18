@@ -9,10 +9,8 @@ app.post('/success', (req, res) => {
     res.json(req.body);
 });
 
-// GET route to return a "Hey" message
-app.get('/', (req, res) => {
-    res.send('Hey');
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
-
-// Start the server (Note: This line is optional in Vercel's serverless environment)
-module.exports = app;
