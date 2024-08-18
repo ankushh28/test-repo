@@ -6,7 +6,9 @@ app.use(express.json());
 
 // POST route to return the JSON request body
 app.post('/success', (req, res) => {
-    res.json(req.body);
+    const paymentData = req.body;
+    console.log(paymentData);
+    res.json(paymentData);
 });
 
 // Start the server
