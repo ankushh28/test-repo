@@ -8,7 +8,6 @@ app.use(express.json());
 app.post('/success', (req, res) => {
 const payload = req.body;
   console.log('Received PayU webhook:', payload);
-  res.status(200).send('Webhook received successfully');
   res.status(200).send(payload);
 });
 
